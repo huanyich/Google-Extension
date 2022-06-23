@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- <script type="text/javascript" src="try.js"></script> -->
+</head>
+<body>
+  <h1>
+    Result page 
+  </h1>
+  <h2>
+    Name: <span id="myText"/>
+  </h2>
+    <script language="JavaScript">
+        function processUser()
+        {
+          //var parameters = location.search.substring(1).split("?");
+          //console.log(parameters);
+          //const name = params.get("name");
+          //document.getElementById('result-name').innerHTML = name;
+        var url = window.location.href;
+        let paramaters = (new URL(url)).searchParams;
+        var name = paramaters.get("name");
+        var email = paramaters.get("email");
+        var address = paramaters.get("address");
+        var zip = paramaters.get("zip");
+        var CN = paramaters.get("CN");
+        var month = paramaters.get("month");
+        var year = paramaters.get("year");
+        var CVV = paramaters.get("CVV");
+        var itemName = paramaters.get("itemName");
+        var color = paramaters.get("color");
+        var size = paramaters.get("size");
+        console.log(name);
+        console.log(email);
+        console.log(address);
+        console.log(zip);
+        console.log(CN);
+        console.log(month);
+        console.log(year);
+        console.log(CVV);
+        console.log(itemName);
+        console.log(color);
+        console.log(size);
+        document.getElementById("myText").innerHTML = name;
+
+        }
+
+        processUser();
+      </script>
+    
+</body>
+</html>
